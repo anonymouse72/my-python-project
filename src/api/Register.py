@@ -205,7 +205,8 @@ def login():
                 'session': session['username']
             }), 200
         else:
-            return jsonify({'message': 'Invalid email or password', 'code': 401}), 401
+
+            return jsonify({'message': 'This user is not registered, please register first.', 'code': 200}), 200
 
     except Exception as e:
         return jsonify({'message': 'Internal server error', 'code': 500, 'error': str(e)}), 500
