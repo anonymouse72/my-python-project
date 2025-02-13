@@ -10,6 +10,8 @@ from datetime import datetime, timedelta
 from flask import jsonify, request, session, Blueprint
 from flask_cors import CORS
 import uuid
+
+from src.api.getinformation import logger
 from src.bean.Constant import Constant
 from src.db.ConnectedDB import get_db_connection
 from src.utils.CryptoUtils import CryptoUtils
@@ -177,7 +179,7 @@ def login():
     password = data.get('password')
     if not email or not password:
         return jsonify({'message': 'Email and password are required'}), 400
-
+    logger.info("login information:",data)
     try:
         conn = get_db_connection()
         cursor = conn.cursor(dictionary=True)
