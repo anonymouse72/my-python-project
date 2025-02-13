@@ -191,7 +191,7 @@ def login():
 
         cursor.close()
         conn.close()
-
+        print(user,'user')
 
         if user:
             session["user_id"] = email # 存储用户 ID
