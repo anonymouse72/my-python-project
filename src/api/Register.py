@@ -145,7 +145,7 @@ def checkEmail():
         conn.close()
 
         if row:
-            return jsonify({'message': 'Email already exists'}), 201
+            return jsonify({'message': 'Email already exists'}), 200
         else:
             return jsonify({'message': 'Email available for registration'}), 200
 
