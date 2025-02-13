@@ -184,7 +184,7 @@ def login():
         conn = get_db_connection()
         cursor = conn.cursor(dictionary=True)
         hashed_password = hashlib.sha256(password.encode()).hexdigest()
-
+        print(hashed_password)
         cursor.execute("SELECT * FROM userinfo WHERE email=%s AND password=%s", (email, hashed_password))
         user = cursor.fetchone()
 
