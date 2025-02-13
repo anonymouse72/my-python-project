@@ -6,7 +6,7 @@ import hashlib
 app = Flask(__name__)
 # 数据库连接配置
 DB_CONFIG = {
-    'host': '127.0.0.1',
+    'host': '13.229.224.223',
     'user': 'root',
     'password': '123456',
     'database': 'fortune'

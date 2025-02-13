@@ -11,7 +11,7 @@ class MySQLDatabase:
         :param password: 数据库密码
         :param database: 数据库名称
         """
-        self.host = "127.0.0.1"
+        self.host = "13.229.224.223"
         self.user = "root"
         self.password = "123456"
         self.database = "fortune"

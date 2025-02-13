@@ -182,6 +182,7 @@ def login():
     logger.info("login information:",data)
     try:
         conn = get_db_connection()
+        print(conn)
         cursor = conn.cursor(dictionary=True)
         hashed_password = hashlib.sha256(password.encode()).hexdigest()
         print(hashed_password)
