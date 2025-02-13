@@ -13,7 +13,7 @@ app = Flask(__name__, static_folder="frontend/dist", template_folder="frontend/d
 app.secret_key = os.getenv("FLASK_SECRET_KEY", Constant.AES_KEY)  # 确保 session 可用
 
 # ✅ 允许前端携带 session 并指定跨域源
-CORS(app, supports_credentials=True, origins=["http://localhost:8000"])  # 确保与前端一致
+# CORS(app, supports_credentials=True, origins=["http://localhost:8000"])  # 确保与前端一致
 CORS(app, supports_credentials=True, origins=["http://13.229.224.223:8000"])  # 确保与前端一致
 
 # ✅ 注册 API 蓝图
